@@ -25,10 +25,10 @@ async function loadTaxiData() {
     showLoading();
     const response = await fetch('./assets/data/taksiler.json');
     if (!response.ok) throw new Error('Veri yüklenemedi');
-    
+
     AppState.taxis = await response.json();
     AppState.filteredTaxis = [...AppState.taxis];
-    
+
     hideLoading();
     renderTaxis();
     populateFilters();
@@ -43,64 +43,64 @@ async function loadTaxiData() {
 // ============================================
 function applyFilters() {
   let filtered = [...AppState.taxis];
-  
+
   // Search filter
   if (AppState.activeFilters.search) {
     const searchLower = AppState.activeFilters.search.toLowerCase();
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.durakAdi.toLowerCase().includes(searchLower) ||
       taxi.mahalle.toLowerCase().includes(searchLower) ||
       taxi.hizmetler.some(h => h.toLowerCase().includes(searchLower))
     );
   }
-  
+
   // Mahalle filter
   if (AppState.activeFilters.mahalle) {
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.mahalle === AppState.activeFilters.mahalle
     );
   }
-  
+
   // 7/24 filter
   if (AppState.activeFilters.is24_7) {
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.calismaSaatleri === '7/24'
     );
   }
-  
+
   // Card payment filter
   if (AppState.activeFilters.acceptsCard) {
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.odeme.includes('kart')
     );
   }
-  
+
   // Airport transfer filter
   if (AppState.activeFilters.airport) {
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.hizmetler.includes('havalimani')
     );
   }
-  
+
   // Bus station filter
   if (AppState.activeFilters.busStation) {
-    filtered = filtered.filter(taxi => 
+    filtered = filtered.filter(taxi =>
       taxi.hizmetler.includes('otogar')
     );
   }
-  
+
   // Sort: Featured first, then by name
   filtered.sort((a, b) => {
     if (a.oneCikar && !b.oneCikar) return -1;
     if (!a.oneCikar && b.oneCikar) return 1;
     return a.durakAdi.localeCompare(b.durakAdi, 'tr');
   });
-  
+
   // If user location available, sort by distance
   if (AppState.userLocation) {
     filtered = sortByDistance(filtered);
   }
-  
+
   AppState.filteredTaxis = filtered;
   renderTaxis();
   updateActiveFiltersDisplay();
@@ -142,17 +142,17 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
   const R = 6371; // Earth radius in km
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = 
-    Math.sin(dLat/2) * Math.sin(dLat/2) +
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
     Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-    Math.sin(dLng/2) * Math.sin(dLng/2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return R * c;
 }
 
 function sortByDistance(taxis) {
   if (!AppState.userLocation) return taxis;
-  
+
   return taxis.map(taxi => {
     const [lat, lng] = taxi.konum.split(',').map(Number);
     const distance = calculateDistance(
@@ -177,7 +177,7 @@ function sortByDistance(taxis) {
 function renderTaxis() {
   const container = document.getElementById('taxis-container');
   if (!container) return;
-  
+
   if (AppState.filteredTaxis.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: white;">
@@ -188,7 +188,7 @@ function renderTaxis() {
     `;
     return;
   }
-  
+
   container.innerHTML = AppState.filteredTaxis.map((taxi, index) => {
     // Add ad after every 6 cards
     const adHtml = (index + 1) % 6 === 0 ? `
@@ -198,14 +198,14 @@ function renderTaxis() {
              style="display:block"
              data-ad-format="fluid"
              data-ad-layout-key="-6t+ed+2i-1n-4w"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+             data-ad-client="ca-pub-4211004489667670"
              data-ad-slot="XXXXXXXXXX"></ins>
       </div>
     ` : '';
-    
+
     return createTaxiCard(taxi) + adHtml;
   }).join('');
-  
+
   // Reinitialize AdSense ads
   if (window.adsbygoogle) {
     const ads = document.querySelectorAll('.adsbygoogle');
@@ -221,22 +221,22 @@ function renderTaxis() {
 
 function createTaxiCard(taxi) {
   const badges = [];
-  
+
   if (taxi.oneCikar) {
     badges.push('<span class="badge badge-featured">⭐ Sponsorlu</span>');
   }
-  
+
   if (taxi.calismaSaatleri === '7/24') {
     badges.push('<span class="badge badge-24-7">7/24</span>');
   }
-  
+
   if (taxi.distance !== undefined) {
     const isNearest = taxi.distance < 2;
     if (isNearest) {
       badges.push(`<span class="badge badge-nearest">📍 ${taxi.distance.toFixed(1)} km</span>`);
     }
   }
-  
+
   const services = taxi.hizmetler.map(service => {
     const serviceNames = {
       '7/24': '24 Saat',
@@ -245,11 +245,11 @@ function createTaxiCard(taxi) {
     };
     return `<span class="service-tag">${serviceNames[service] || service}</span>`;
   }).join('');
-  
+
   const paymentMethods = taxi.odeme.map(method => {
     return method === 'kart' ? '💳 Kart' : '💵 Nakit';
   }).join(', ');
-  
+
   return `
     <div class="taxi-card fade-in">
       <div class="taxi-card-header">
@@ -308,12 +308,12 @@ function createTaxiCard(taxi) {
 function populateFilters() {
   const mahalleSelect = document.getElementById('mahalle-filter');
   if (!mahalleSelect) return;
-  
+
   // Get unique mahalle values
-  const mahalleler = [...new Set(AppState.taxis.map(t => t.mahalle))].sort((a, b) => 
+  const mahalleler = [...new Set(AppState.taxis.map(t => t.mahalle))].sort((a, b) =>
     a.localeCompare(b, 'tr')
   );
-  
+
   mahalleler.forEach(mahalle => {
     const option = document.createElement('option');
     option.value = mahalle;
@@ -325,9 +325,9 @@ function populateFilters() {
 function updateActiveFiltersDisplay() {
   const container = document.getElementById('active-filters');
   if (!container) return;
-  
+
   const chips = [];
-  
+
   if (AppState.activeFilters.search) {
     chips.push(`
       <span class="filter-chip">
@@ -336,7 +336,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (AppState.activeFilters.mahalle) {
     chips.push(`
       <span class="filter-chip">
@@ -345,7 +345,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (AppState.activeFilters.is24_7) {
     chips.push(`
       <span class="filter-chip">
@@ -354,7 +354,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (AppState.activeFilters.acceptsCard) {
     chips.push(`
       <span class="filter-chip">
@@ -363,7 +363,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (AppState.activeFilters.airport) {
     chips.push(`
       <span class="filter-chip">
@@ -372,7 +372,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (AppState.activeFilters.busStation) {
     chips.push(`
       <span class="filter-chip">
@@ -381,7 +381,7 @@ function updateActiveFiltersDisplay() {
       </span>
     `);
   }
-  
+
   if (chips.length > 0) {
     container.innerHTML = chips.join('') + `
       <button onclick="clearAllFilters()" style="padding: 0.25rem 0.75rem; background: #EF4444; color: white; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">
@@ -392,7 +392,7 @@ function updateActiveFiltersDisplay() {
   } else {
     container.style.display = 'none';
   }
-  
+
   // Update result count
   const resultCount = document.getElementById('result-count');
   if (resultCount) {
@@ -414,7 +414,7 @@ function removeFilter(filterName) {
     const checkbox = document.getElementById(`${filterName}-filter`);
     if (checkbox) checkbox.checked = false;
   }
-  
+
   applyFilters();
 }
 
@@ -427,16 +427,16 @@ function clearAllFilters() {
     airport: false,
     busStation: false
   };
-  
+
   // Reset form elements
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.value = '';
-  
+
   const mahalleSelect = document.getElementById('mahalle-filter');
   if (mahalleSelect) mahalleSelect.value = '';
-  
+
   document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
-  
+
   applyFilters();
 }
 
@@ -446,11 +446,11 @@ function clearAllFilters() {
 function calculatePrice() {
   const distanceInput = document.getElementById('distance-input');
   const resultDiv = document.getElementById('calculator-result');
-  
+
   if (!distanceInput || !resultDiv) return;
-  
+
   const distance = parseFloat(distanceInput.value);
-  
+
   if (isNaN(distance) || distance <= 0) {
     resultDiv.innerHTML = `
       <p style="color: #EF4444; font-weight: 600;">Lütfen geçerli bir mesafe girin</p>
@@ -458,11 +458,11 @@ function calculatePrice() {
     resultDiv.style.display = 'block';
     return;
   }
-  
+
   const acilisUcreti = 30;
   const kmBasiUcret = 15;
   const tahminiUcret = acilisUcreti + (distance * kmBasiUcret);
-  
+
   resultDiv.innerHTML = `
     <div class="calculator-result">
       <div class="calculator-price">${tahminiUcret.toFixed(2)} ₺</div>
@@ -480,22 +480,22 @@ function calculatePrice() {
 function loadTaxiDetail() {
   const urlParams = new URLSearchParams(window.location.search);
   const taxiId = urlParams.get('id');
-  
+
   if (!taxiId) {
     window.location.href = 'index.html';
     return;
   }
-  
+
   fetch('./assets/data/taksiler.json')
     .then(res => res.json())
     .then(taxis => {
       const taxi = taxis.find(t => t.id === taxiId);
-      
+
       if (!taxi) {
         window.location.href = 'index.html';
         return;
       }
-      
+
       renderTaxiDetail(taxi);
     })
     .catch(error => {
@@ -506,14 +506,14 @@ function loadTaxiDetail() {
 
 function renderTaxiDetail(taxi) {
   document.title = `${taxi.durakAdi} - Kilis Taksi`;
-  
+
   const container = document.getElementById('taxi-detail-container');
   if (!container) return;
-  
+
   const paymentMethods = taxi.odeme.map(method => {
     return method === 'kart' ? '💳 Kart' : '💵 Nakit';
   }).join(', ');
-  
+
   const services = taxi.hizmetler.map(service => {
     const serviceNames = {
       '7/24': '24 Saat Hizmet',
@@ -522,7 +522,7 @@ function renderTaxiDetail(taxi) {
     };
     return `<li>${serviceNames[service] || service}</li>`;
   }).join('');
-  
+
   container.innerHTML = `
     <div class="detail-content" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
       <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #0F172A;">
@@ -629,9 +629,9 @@ function showNotification(message, type = 'info') {
     animation: slideInRight 0.3s ease-out;
   `;
   notification.textContent = message;
-  
+
   document.body.appendChild(notification);
-  
+
   setTimeout(() => {
     notification.style.animation = 'slideOutRight 0.3s ease-out';
     setTimeout(() => notification.remove(), 300);
@@ -657,7 +657,7 @@ function initializeEventListeners() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
   }
-  
+
   // Mahalle filter
   const mahalleSelect = document.getElementById('mahalle-filter');
   if (mahalleSelect) {
@@ -666,7 +666,7 @@ function initializeEventListeners() {
       applyFilters();
     });
   }
-  
+
   // Checkbox filters
   const filters = [
     { id: 'is24_7-filter', key: 'is24_7' },
@@ -674,7 +674,7 @@ function initializeEventListeners() {
     { id: 'airport-filter', key: 'airport' },
     { id: 'busStation-filter', key: 'busStation' }
   ];
-  
+
   filters.forEach(filter => {
     const checkbox = document.getElementById(filter.id);
     if (checkbox) {
@@ -684,26 +684,26 @@ function initializeEventListeners() {
       });
     }
   });
-  
+
   // Location button
   const locationBtn = document.getElementById('location-btn');
   if (locationBtn) {
     locationBtn.addEventListener('click', requestUserLocation);
   }
-  
+
   // Calculator
   const calculateBtn = document.getElementById('calculate-btn');
   if (calculateBtn) {
     calculateBtn.addEventListener('click', calculatePrice);
   }
-  
+
   const distanceInput = document.getElementById('distance-input');
   if (distanceInput) {
     distanceInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') calculatePrice();
     });
   }
-  
+
   // Mobile menu toggle
   const navbarToggle = document.querySelector('.navbar-toggle');
   if (navbarToggle) {
@@ -722,7 +722,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTaxiData();
     initializeEventListeners();
   }
-  
+
   // Set active nav link
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.navbar-menu a, .mobile-menu a').forEach(link => {
