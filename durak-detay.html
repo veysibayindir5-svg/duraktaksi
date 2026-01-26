@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detaylı taksi durağı bilgileri, konum, telefon, çalışma saatleri ve hizmetler.">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+
+    <title>Durak Detayları - Kilis Taksi</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">🚕</span>
+                <span>Kilis Taksi</span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+
+            <button class="navbar-toggle" aria-label="Menüyü Aç">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Detail Section -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <a href="javascript:history.back()"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; color: white; margin-bottom: 1.5rem; font-weight: 600;">
+                ← Geri Dön
+            </a>
+
+            <div id="taxi-detail-container">
+                <!-- Detail content will be loaded by JavaScript -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container" style="margin-top: 2rem;">
+                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+            </div>
+
+            <!-- Price Calculator -->
+            <div class="calculator-section" style="margin-top: 2rem;">
+                <h2 class="calculator-title">💰 Tahmini Ücret Hesapla</h2>
+                <div class="calculator-form">
+                    <div class="calculator-input-group">
+                        <label for="distance-input" class="calculator-label">Mesafe (km)</label>
+                        <input type="number" id="distance-input" class="calculator-input" placeholder="Örn: 5" min="0"
+                            step="0.1">
+                    </div>
+                    <button id="calculate-btn" class="search-btn" style="width: 100%; margin-top: 1rem;">
+                        Hesapla
+                    </button>
+                    <div id="calculator-result" style="display: none; margin-top: 1rem;"></div>
+                </div>
+                <div
+                    style="margin-top: 1.5rem; padding: 1rem; background: #FEF3C7; border-radius: 0.5rem; text-align: center;">
+                    <p style="font-size: 0.875rem; color: #92400E;">
+                        <strong>⚠️ Önemli:</strong> Fiyatlar duruma göre değişebilir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-section-title">Kilis Taksi Portalı</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        Kilis merkezdeki tüm taksi duraklarını tek bir platformda bulun.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="sss.html">SSS</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">İletişim</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        <strong>E-posta:</strong> info@kilistaksi.com<br>
+                        <strong>Telefon:</strong> 0348 XXX XX XX
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kilis Taksi Portalı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+
+</html>

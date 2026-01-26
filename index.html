@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kilis merkezdeki tüm taksi duraklarını arayın. 7/24 hizmet, havalimanı transferi, kartla ödeme seçenekleri ile en yakın taksiyi bulun.">
+  <meta name="keywords"
+    content="kilis taksi, taksi durağı, kilis taksi durakları, 7/24 taksi, havalimanı transferi, kilis ulaşım">
+  <meta name="author" content="Kilis Taksi Portalı">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Kilis Taksi Durakları | 7/24 Taksi Hizmeti">
+  <meta property="og:description" content="Kilis merkezdeki tüm taksi duraklarını arayın ve en yakın taksiyi bulun.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alanadim.com/">
+  <meta property="og:site_name" content="Kilis Taksi Portalı">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+
+  <title>Kilis Taksi Durakları | 7/24 Taksi Hizmeti</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/sidebar-layout.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kilis Taksi Portalı",
+    "description": "Kilis merkezdeki tüm taksi duraklarını bulabileceğiniz kapsamlı portal",
+    "url": "https://alanadim.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://alanadim.com/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <span class="navbar-logo-icon">🚕</span>
+        <span>Kilis Taksi</span>
+      </a>
+
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="sss.html">SSS</a></li>
+      </ul>
+
+      <button class="navbar-toggle" aria-label="Menüyü Aç">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="sss.html">SSS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Kilis'te Taksi Aramak Artık Çok Kolay!</h1>
+      <p class="hero-subtitle">
+        Kilis merkezdeki tüm taksi duraklarını tek bir yerden arayın.
+        7/24 hizmet, havalimanı transferi ve kartla ödeme seçenekleriyle en yakın taksiyi bulun.
+      </p>
+
+      <!-- Top Ad Banner -->
+      <div class="ad-container" style="max-width: 728px; height: 90px; margin: 2rem auto;">
+        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filter Section -->
+  <section class="section">
+    <div class="main-layout">
+      <!-- Left Sidebar Ads -->
+      <aside class="sidebar-left">
+        <div class="sidebar-ad sticky-ad">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+            data-ad-slot="XXXXXXXXXX" data-ad-format="vertical"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="container">
+          <div class="search-section">
+            <div class="search-box">
+              <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" class="search-input"
+                  placeholder="Durak adı, mahalle veya hizmet ara..." autocomplete="off">
+              </div>
+              <button id="location-btn" class="search-btn">
+                📍 En Yakını Bul
+              </button>
+            </div>
+
+            <div class="filter-panel">
+              <div class="filter-group">
+                <label class="filter-label" for="mahalle-filter">Mahalle</label>
+                <select id="mahalle-filter" class="filter-select">
+                  <option value="">Tüm Mahalleler</option>
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label">Hizmetler</label>
+                <div class="filter-checkboxes">
+                  <div class="filter-checkbox-wrapper">
+                    <input type="checkbox" id="is24_7-filter" class="filter-checkbox">
+                    <label for="is24_7-filter" class="filter-checkbox-label">7/24</label>
+                  </div>
+                  <div class="filter-checkbox-wrapper">
+                    <input type="checkbox" id="acceptsCard-filter" class="filter-checkbox">
+                    <label for="acceptsCard-filter" class="filter-checkbox-label">Kartla Ödeme</label>
+                  </div>
+                  <div class="filter-checkbox-wrapper">
+                    <input type="checkbox" id="airport-filter" class="filter-checkbox">
+                    <label for="airport-filter" class="filter-checkbox-label">Havalimanı</label>
+                  </div>
+                  <div class="filter-checkbox-wrapper">
+                    <input type="checkbox" id="busStation-filter" class="filter-checkbox">
+                    <label for="busStation-filter" class="filter-checkbox-label">Otogar</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="active-filters" class="active-filters" style="display: none;"></div>
+
+            <div style="margin-top: 1rem; text-align: center; color: var(--text-secondary); font-size: 0.875rem;">
+              <span id="result-count"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar Ads -->
+      <aside class="sidebar-right">
+        <div class="sidebar-ad sticky-ad">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+            data-ad-slot="XXXXXXXXXX" data-ad-format="vertical"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Featured/Sponsored Taxis Section -->
+  <section class="taxis-section">
+    <div class="main-layout">
+      <!-- Left Sidebar (empty spacer for alignment) -->
+      <aside class="sidebar-left"></aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="container">
+          <h2 class="section-title">⭐ Öne Çıkan Taksi Durakları</h2>
+          <div id="taxis-container" class="taxis-grid">
+            <!-- Taxi cards will be rendered here by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar (empty spacer for alignment) -->
+      <aside class="sidebar-right"></aside>
+    </div>
+  </section>
+
+  <!-- Ad Section (Mid-page) -->
+  <section class="section">
+    <div class="container">
+      <div class="ad-container" style="max-width: 970px; margin: 0 auto;">
+        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator Section -->
+  <section class="section">
+    <div class="container">
+      <div class="calculator-section">
+        <h2 class="calculator-title">💰 Tahmini Ücret Hesapla</h2>
+        <div class="calculator-form">
+          <div class="calculator-input-group">
+            <label for="distance-input" class="calculator-label">Mesafe (km)</label>
+            <input type="number" id="distance-input" class="calculator-input" placeholder="Örn: 5" min="0" step="0.1">
+          </div>
+          <button id="calculate-btn" class="search-btn" style="width: 100%; margin-top: 1rem;">
+            Hesapla
+          </button>
+          <div id="calculator-result" style="display: none; margin-top: 1rem;"></div>
+        </div>
+        <div style="margin-top: 1.5rem; padding: 1rem; background: #FEF3C7; border-radius: 0.5rem; text-align: center;">
+          <p style="font-size: 0.875rem; color: #92400E;">
+            <strong>⚠️ Önemli:</strong> Fiyatlar duruma göre değişebilir.
+            Bu hesaplama sadece tahmini bir ücret vermektedir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3 class="footer-section-title">Kilis Taksi Portalı</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem;">
+            Kilis merkezdeki tüm taksi duraklarını tek bir platformda bulun.
+            Güvenli ve hızlı ulaşım için doğru adres.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-section-title">Hızlı Linkler</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="duraklar.html">Tüm Duraklar</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="sss.html">SSS</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-section-title">İletişim</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem;">
+            <strong>E-posta:</strong> info@kilistaksi.com<br>
+            <strong>Telefon:</strong> 0348 XXX XX XX
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Ad -->
+      <div class="ad-container" style="margin: 2rem 0;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"
+          data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kilis Taksi Portalı. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+  <script>
+    // Initialize AdSense ads
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kilis Taksi Portalı ile iletişime geçin. Sorularınız, önerileriniz ve geri bildirimleriniz için bizimle iletişime geçin.">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+
+    <title>İletişim - Kilis Taksi Portalı</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">🚕</span>
+                <span>Kilis Taksi</span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html" class="active">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+
+            <button class="navbar-toggle" aria-label="Menüyü Aç">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">İletişim</h1>
+            <p class="hero-subtitle">
+                Sorularınız, önerileriniz veya geri bildirimleriniz için bizimle iletişime geçin
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+
+                <!-- Contact Form -->
+                <div
+                    style="background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h2
+                        style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-primary);">
+                        📧 Bize Ulaşın
+                    </h2>
+
+                    <!-- Note about WhatsApp form -->
+                    <div
+                        style="background: #D1FAE5; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 4px solid #10B981;">
+                        <p style="color: #065F46; font-size: 0.875rem; line-height: 1.6;">
+                            <strong>💬 WhatsApp Entegrasyonu:</strong> Formunuzu doldurun, mesajınız otomatik olarak
+                            WhatsApp üzerinden iletilecektir.
+                        </p>
+                    </div>
+
+                    <form id="contact-form" style="display: grid; gap: 1.25rem;">
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+                                Ad Soyad <span style="color: #EF4444;">*</span>
+                            </label>
+                            <input type="text" id="name-input" name="name" placeholder="Adınız ve soyadınız" required
+                                style="width: 100%; padding: 0.875rem; border: 2px solid #E2E8F0; border-radius: 0.5rem; font-size: 1rem; transition: all 0.2s;">
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+                                E-posta <span style="color: #EF4444;">*</span>
+                            </label>
+                            <input type="email" id="email-input" name="email" placeholder="ornek@email.com" required
+                                style="width: 100%; padding: 0.875rem; border: 2px solid #E2E8F0; border-radius: 0.5rem; font-size: 1rem; transition: all 0.2s;">
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+                                Telefon (Opsiyonel)
+                            </label>
+                            <input type="tel" id="phone-input" name="phone" placeholder="05XX XXX XX XX"
+                                style="width: 100%; padding: 0.875rem; border: 2px solid #E2E8F0; border-radius: 0.5rem; font-size: 1rem; transition: all 0.2s;">
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+                                Konu <span style="color: #EF4444;">*</span>
+                            </label>
+                            <select id="subject-select" name="subject" required
+                                style="width: 100%; padding: 0.875rem; border: 2px solid #E2E8F0; border-radius: 0.5rem; font-size: 1rem; transition: all 0.2s; background: white; cursor: pointer;">
+                                <option value="">Konu seçin...</option>
+                                <option>Genel Bilgi</option>
+                                <option>Durak Ekleme Talebi</option>
+                                <option>Bilgi Güncelleme</option>
+                                <option>Teknik Destek</option>
+                                <option>Öneri/Şikayet</option>
+                                <option>Diğer</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+                                Mesajınız <span style="color: #EF4444;">*</span>
+                            </label>
+                            <textarea rows="6" id="message-input" name="message"
+                                placeholder="Mesajınızı buraya yazın..." required
+                                style="width: 100%; padding: 0.875rem; border: 2px solid #E2E8F0; border-radius: 0.5rem; font-size: 1rem; transition: all 0.2s; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="search-btn"
+                            style="width: 100%; padding: 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 1rem; cursor: pointer;">
+                            💬 WhatsApp ile Gönder
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div
+                    style="background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                    <h2
+                        style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-primary);">
+                        📞 İletişim Bilgileri
+                    </h2>
+
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div
+                            style="padding: 1.25rem; background: #F8FAFC; border-radius: 0.75rem; border-left: 4px solid var(--color-primary);">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="font-size: 2rem;">📧</div>
+                                <div>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem; color: var(--text-primary);">
+                                        E-posta</h3>
+                                    <a href="mailto:info@kilistaksi.com"
+                                        style="color: var(--color-primary); font-weight: 500;">
+                                        info@kilistaksi.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: 1.25rem; background: #F8FAFC; border-radius: 0.75rem; border-left: 4px solid var(--color-primary);">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="font-size: 2rem;">📱</div>
+                                <div>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem; color: var(--text-primary);">
+                                        Telefon</h3>
+                                    <a href="tel:0348XXXXXXX" style="color: var(--color-primary); font-weight: 500;">
+                                        0348 XXX XX XX
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: 1.25rem; background: #F8FAFC; border-radius: 0.75rem; border-left: 4px solid var(--color-primary);">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="font-size: 2rem;">📍</div>
+                                <div>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem; color: var(--text-primary);">
+                                        Adres</h3>
+                                    <p style="color: var(--text-secondary); line-height: 1.6;">
+                                        Kilis Merkez, Kilis<br>
+                                        Türkiye
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: 1.25rem; background: #F8FAFC; border-radius: 0.75rem; border-left: 4px solid var(--color-primary);">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="font-size: 2rem;">🕐</div>
+                                <div>
+                                    <h3 style="font-weight: 600; margin-bottom: 0.25rem; color: var(--text-primary);">
+                                        Çalışma Saatleri</h3>
+                                    <p style="color: var(--text-secondary); line-height: 1.6;">
+                                        Pazartesi - Cuma: 09:00 - 18:00<br>
+                                        Cumartesi: 09:00 - 13:00<br>
+                                        Pazar: Kapalı
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); border-radius: 0.75rem; color: white; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">
+                            💬 Sosyal Medya
+                        </h3>
+                        <p style="margin-bottom: 1rem; opacity: 0.95; font-size: 0.95rem;">
+                            Bizi sosyal medyadan takip edin, haberdar olun!
+                        </p>
+                        <div style="display: flex; justify-content: center; gap: 1rem;">
+                            <a href="#"
+                                style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; color: var(--color-primary); border-radius: 50%; font-size: 1.25rem; transition: transform 0.2s;">
+                                📘
+                            </a>
+                            <a href="#"
+                                style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; color: var(--color-primary); border-radius: 50%; font-size: 1.25rem; transition: transform 0.2s;">
+                                📸
+                            </a>
+                            <a href="#"
+                                style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; color: var(--color-primary); border-radius: 50%; font-size: 1.25rem; transition: transform 0.2s;">
+                                🐦
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container" style="margin-top: 2rem;">
+                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-section-title">Kilis Taksi Portalı</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        Kilis merkezdeki tüm taksi duraklarını tek bir platformda bulun.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="sss.html">SSS</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">İletişim</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        <strong>E-posta:</strong> info@kilistaksi.com<br>
+                        <strong>Telefon:</strong> 0348 XXX XX XX
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kilis Taksi Portalı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script>
+        // WhatsApp Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name-input').value.trim();
+                const email = document.getElementById('email-input').value.trim();
+                const phone = document.getElementById('phone-input').value.trim();
+                const subject = document.getElementById('subject-select').value;
+                const message = document.getElementById('message-input').value.trim();
+
+                // Validation
+                if (!name || !email || !subject || !message) {
+                    alert('Lütfen tüm zorunlu alanları doldurun!');
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Lütfen geçerli bir e-posta adresi girin!');
+                    return;
+                }
+
+                // Create WhatsApp message
+                let whatsappMessage = `*Kilis Taksi Portal - Yeni İletişim Formu*\n\n`;
+                whatsappMessage += `👤 *Ad Soyad:* ${name}\n`;
+                whatsappMessage += `📧 *E-posta:* ${email}\n`;
+
+                if (phone) {
+                    whatsappMessage += `📱 *Telefon:* ${phone}\n`;
+                }
+
+                whatsappMessage += `📋 *Konu:* ${subject}\n\n`;
+                whatsappMessage += `💬 *Mesaj:*\n${message}`;
+
+                // WhatsApp number (Turkey format: 905518216475)
+                const whatsappNumber = '905518216475';
+
+                // Encode message for URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+
+                // Create WhatsApp URL
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                // Open WhatsApp in new tab
+                window.open(whatsappURL, '_blank');
+
+                // Show success message
+                showNotification('WhatsApp açılıyor! Mesajınızı göndermek için "Gönder" butonuna basın.', 'success');
+
+                // Reset form after 2 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 2000);
+            });
+        }
+
+        // AdSense initialization
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+
+</html>

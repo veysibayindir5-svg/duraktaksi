@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kilis Taksi Portalı hakkında sıkça sorulan sorular. Taksi ücreti, ödeme yöntemleri, havalimanı transferi ve daha fazlası.">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+
+    <title>Sıkça Sorulan Sorular - Kilis Taksi Portalı</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        .faq-item {
+            background: white;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">🚕</span>
+                <span>Kilis Taksi</span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html" class="active">SSS</a></li>
+            </ul>
+
+            <button class="navbar-toggle" aria-label="Menüyü Aç">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Sıkça Sorulan Sorular</h1>
+            <p class="hero-subtitle">
+                Kilis Taksi Portalı ve taksi hizmetleri hakkında merak ettikleriniz
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+
+                <!-- Category: Platform Hakkında -->
+                <div style="margin-bottom: 3rem;">
+                    <h2
+                        style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-align: center;">
+                        🌐 Platform Hakkında
+                    </h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Kilis Taksi Portalı nedir?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Kilis Taksi Portalı, Kilis merkezindeki tüm taksi duraklarını tek bir platformda
+                                toplayan,
+                                arama ve filtreleme özellikleri ile size en uygun taksi durağını bulmanıza yardımcı olan
+                                ücretsiz bir web platformudur. Konum bazlı arama, 7/24 hizmet, havalimanı transferi gibi
+                                filtreleme seçenekleri ile ihtiyacınıza en uygun taksiyi kolayca bulabilirsiniz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Platform ücretsiz mi?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Evet! Kilis Taksi Portalı tamamen ücretsizdir. Tüm özellikleri hiçbir ücret ödemeden
+                                kullanabilirsiniz. Amacımız Kilis'te taksi hizmetlerine erişimi kolaylaştırmaktır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Mobil cihazlarda kullanabilir miyim?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Kesinlikle! Platformumuz mobil uyumlu (responsive) olarak tasarlanmıştır.
+                                Telefonunuz, tabletiniz veya bilgisayarınızdan sorunsuz bir şekilde kullanabilirsiniz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Taksi Hizmetleri -->
+                <div style="margin-bottom: 3rem;">
+                    <h2
+                        style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-align: center;">
+                        🚕 Taksi Hizmetleri
+                    </h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Taksi ücretleri nasıl hesaplanır?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Taksi ücretleri genellikle açılış ücreti + kilometreye göre hesaplanır.
+                                Standart olarak açılış ücreti 30 TL, km başı ücret ise yaklaşık 15 TL'dir.
+                                Ancak bu fiyatlar durak ve duruma göre değişebilir. Sitemizde bulunan "Ücret Hesaplama"
+                                aracı ile tahmini ücret bilgisi alabilirsiniz.
+                            </p>
+                            <p
+                                style="margin-top: 0.75rem; background: #FEF3C7; padding: 0.75rem; border-radius: 0.375rem; color: #92400E;">
+                                <strong>⚠️ Önemli:</strong> Fiyatlar değişebilir. Kesin fiyat için lütfen taksi durağı
+                                ile iletişime geçin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Hangi taksiler kredi kartı kabul ediyor?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Her taksi kartla ödeme kabul etmemektedir. Platform üzerinde "Kartla Ödeme" filtresini
+                                kullanarak kart kabul eden taksi duraklarını görebilirsiniz. Ayrıca her taksi kartının
+                                detay sayfasında ödeme yöntemleri açıkça belirtilmiştir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>7/24 hizmet veren taksiler var mı?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Evet! Kilis'te 7/24 hizmet veren birçok taksi durağı bulunmaktadır.
+                                Ana sayfada veya "Tüm Duraklar" sayfasında "7/24" filtresini seçerek
+                                gece de hizmet veren taksi duraklarını listeleyebilirsiniz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Havalimanı transferi yapan taksiler var mı?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Evet, birçok taksi durağı havalimanı transfer hizmeti sunmaktadır.
+                                "Havalimanı" filtresini kullanarak bu hizmeti veren durakları bulabilirsiniz.
+                                Fiyat ve rezervasyon için lütfen ilgili durakla direkt iletişime geçin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Önceden rezervasyon yapabilir miyim?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Platformumuz üzerinden direkt rezervasyon yapma özelliği bulunmamaktadır.
+                                Ancak her taksi durağının telefon numarası ve WhatsApp bilgisi paylaşılmıştır.
+                                Özellikle havalimanı transferi veya özel organizasyonlar için önceden arayarak
+                                rezervasyon yapmanızı öneririz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Platform Özellikleri -->
+                <div style="margin-bottom: 3rem;">
+                    <h2
+                        style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-align: center;">
+                        ⚙️ Platform Özellikleri
+                    </h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>"En Yakını Bul" özelliği nasıl çalışır?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                "En Yakını Bul" butonuna tıkladığınızda, tarayıcınız konum izni isteyecektir.
+                                İzin verdiğinizde, platformumuz konumunuza en yakın taksi duraklarını hesaplayıp
+                                size mesafeye göre sıralı şekilde gösterecektir. Bu özellik sayesinde en yakın
+                                taksiyi hızlıca bulabilirsiniz.
+                            </p>
+                            <p style="margin-top: 0.75rem;">
+                                <strong>Not:</strong> Konum bilginiz sadece tarayıcınızda işlenir ve hiçbir yere
+                                kaydedilmez.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Filtreleme nasıl kullanılır?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Arama kutusunun altında bulunan filtre panelinden istediğiniz kriterleri seçebilirsiniz:
+                            </p>
+                            <ul style="margin-top: 0.75rem; padding-left: 1.5rem; line-height: 2;">
+                                <li><strong>Mahalle:</strong> Belirli bir mahalledeki durakları gösterir</li>
+                                <li><strong>7/24:</strong> Gece de hizmet veren durakları filtreler</li>
+                                <li><strong>Kartla Ödeme:</strong> Kredi kartı kabul eden durakları gösterir</li>
+                                <li><strong>Havalimanı:</strong> Havalimanı transferi yapan durakları listeler</li>
+                                <li><strong>Otogar:</strong> Otogar transferi hizmeti veren durakları gösterir</li>
+                            </ul>
+                            <p style="margin-top: 0.75rem;">
+                                Birden fazla filtre aynı anda kullanılabilir ve aktif filtreler ekranda gösterilir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Sponsorlu duraklar nedir?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                "⭐ Sponsorlu" etiketi taşıyan duraklar, platformumuzda öne çıkan yerleşim alanlarına
+                                sahip olup listelerin üst sıralarında görünürler. Bu duraklar hizmet kalitesi
+                                bakımından diğerlerinden farklı değildir, sadece görünürlük açısından desteklenmektedir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Diğer -->
+                <div style="margin-bottom: 3rem;">
+                    <h2
+                        style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-align: center;">
+                        ❓ Diğer Sorular
+                    </h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Yeni taksi durağı ekletebilir miyim?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Evet! Eğer platformda bulunmayan bir taksi durağı biliyorsanız,
+                                <a href="iletisim.html"
+                                    style="color: var(--color-primary); font-weight: 600;">İletişim</a>
+                                sayfasından bizimle iletişime geçebilirsiniz. Durak bilgilerini doğruladıktan sonra
+                                sisteme ekleyeceğiz.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Bilgiler güncel mi?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Bilgileri olabildiğince güncel tutmaya çalışıyoruz. Ancak telefon numaraları,
+                                çalışma saatleri veya hizmetler zaman içinde değişebilir. Eğer yanlış veya
+                                güncel olmayan bir bilgi fark ederseniz, lütfen bize bildirin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Gizlilik politikanız nedir?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Platformumuz hiçbir kişisel veri toplamaz veya saklamaz. Kullandığınız arama ve
+                                filtre bilgileri sadece tarayıcınızda kalır. "En Yakını Bul" özelliği için
+                                verdiğiniz konum izni de sadece o an için geçerlidir ve hiçbir yere kaydedilmez.
+                            </p>
+                            <p style="margin-top: 0.75rem;">
+                                Google AdSense reklamları gösterilmektedir ve Google'ın gizlilik politikası geçerlidir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Sorunum çözülmedi, nasıl iletişime geçebilirim?</span>
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Cevabını bulamadığınız sorular için
+                                <a href="iletisim.html"
+                                    style="color: var(--color-primary); font-weight: 600;">İletişim</a>
+                                sayfasından bizimle iletişime geçebilirsiniz. Size yardımcı olmaktan mutluluk duyarız!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Box -->
+                <div
+                    style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; color: white; margin-top: 3rem;">
+                    <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">
+                        Başka Sorunuz Var mı?
+                    </h3>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.95; font-size: 1.05rem;">
+                        Bizimle iletişime geçmekten çekinmeyin!
+                    </p>
+                    <a href="iletisim.html"
+                        style="display: inline-block; padding: 1rem 2.5rem; background: white; color: var(--text-primary); border-radius: 0.5rem; font-weight: 600; font-size: 1.05rem;">
+                        İletişime Geç →
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Ad Section -->
+            <div class="ad-container" style="margin-top: 2rem;">
+                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-section-title">Kilis Taksi Portalı</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        Kilis merkezdeki tüm taksi duraklarını tek bir platformda bulun.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="sss.html">SSS</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">İletişim</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        <strong>E-posta:</strong> info@kilistaksi.com<br>
+                        <strong>Telefon:</strong> 0348 XXX XX XX
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kilis Taksi Portalı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+
+        // FAQ Accordion functionality
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked FAQ if it wasn't active
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

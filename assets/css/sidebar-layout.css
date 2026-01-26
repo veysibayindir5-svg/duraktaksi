@@ -1,0 +1,71 @@
+/* ============================================
+   Sidebar Layout
+   ============================================ */
+
+/* Main 3-column layout */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Desktop: Show sidebars */
+@media (min-width: 1280px) {
+    .main-layout {
+        grid-template-columns: 180px 1fr 180px;
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 1440px) {
+    .main-layout {
+        grid-template-columns: 250px 1fr 250px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .main-layout {
+        grid-template-columns: 300px 1fr 300px;
+    }
+}
+
+/* Sidebar containers */
+.sidebar-left,
+.sidebar-right {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+
+    .sidebar-left,
+    .sidebar-right {
+        display: block;
+    }
+}
+
+/* Sidebar ad styling */
+.sidebar-ad {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-md);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sticky positioning */
+.sticky-ad {
+    position: sticky;
+    top: calc(60px + var(--spacing-md));
+}
+
+/* Main content wrapper */
+.main-content {
+    width: 100%;
+    max-width: 100%;
+}

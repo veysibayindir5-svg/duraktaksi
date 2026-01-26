@@ -1,0 +1,354 @@
+[
+  {
+    "id": "lina-taksi",
+    "durakAdi": "Kilis Lina Taksi",
+    "telefonlar": [
+      "0539 814 28 28"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "905398142828",
+    "konum": "36.7170,37.1215",
+    "konumAdres": "Mehmet Sanlı, Erdoğan Bayraktar Cd No:24, Merkez, Kilis",
+    "aracTipi": "Sedan & Minivan & SUV",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "havalimani",
+      "otogar"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": true,
+    "aciklama": "Kilis'in önde gelen taksi hizmeti. 7/24 şehir içi ve şehirlerarası güvenilir ulaşım. Geniş araç filosu ve deneyimli şoförler."
+  },
+  {
+    "id": "otogar-taksi",
+    "durakAdi": "Kilis Otogar Taksi Durağı",
+    "telefonlar": [
+      "0348 813 56 15",
+      "0506 626 66 26"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "905066266626",
+    "konum": "36.7145,37.1289",
+    "konumAdres": "Kilis Otogar, Merkez, Kilis",
+    "aracTipi": "Sedan & Minivan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "otogar",
+      "havalimani"
+    ],
+    "mahalle": "Otogar",
+    "oneCikar": true,
+    "aciklama": "Kilis Otogar'da hizmet veren 7/24 taksi durağı. Şehirlerarası ve havalimanı transferleri."
+  },
+  {
+    "id": "besevler-site-taksi",
+    "durakAdi": "Beşevler Site Taksi",
+    "telefonlar": [
+      "0348 813 49 48",
+      "0544 776 22 13"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "905447762213",
+    "konum": "36.7166,37.1208",
+    "konumAdres": "Beşevler Mahallesi, Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "havalimani"
+    ],
+    "mahalle": "Beşevler",
+    "oneCikar": true,
+    "aciklama": "7/24 hizmet veren Beşevler Site Taksi. Şehir içi ve çevre illere transfer hizmeti."
+  },
+  {
+    "id": "cem-taksi",
+    "durakAdi": "Cem Taksi Durağı",
+    "telefonlar": [
+      "0348 813 63 21"
+    ],
+    "calismaSaatleri": "06:00 - 23:00",
+    "whatsapp": "903488136321",
+    "konum": "36.7178,37.1220",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "havalimani"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Mustafa Şahin tarafından işletilen Cem Taksi Durağı."
+  },
+  {
+    "id": "birlik-bulvar-taksi",
+    "durakAdi": "Birlik Bulvar Taksi Durağı",
+    "telefonlar": [
+      "0348 814 40 45"
+    ],
+    "calismaSaatleri": "06:00 - 00:00",
+    "whatsapp": "903488144045",
+    "konum": "36.7189,37.1245",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan & SUV",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "havalimani",
+      "otogar"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": true,
+    "aciklama": "Mehmet Ali Karapınar tarafından işletilen Birlik Bulvar Taksi Durağı."
+  },
+  {
+    "id": "karadeniz-taksi",
+    "durakAdi": "Karadeniz Taksi Durağı",
+    "telefonlar": [
+      "0348 813 19 47"
+    ],
+    "calismaSaatleri": "05:00 - 23:00",
+    "whatsapp": "903488131947",
+    "konum": "36.7156,37.1189",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit"
+    ],
+    "hizmetler": [
+      "havalimani"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Mustafa Pirinççioğlu tarafından işletilen Karadeniz Taksi Durağı."
+  },
+  {
+    "id": "universite-taksi",
+    "durakAdi": "Üniversite Taksi",
+    "telefonlar": [
+      "0348 813 82 83"
+    ],
+    "calismaSaatleri": "06:00 - 22:00",
+    "whatsapp": "903488138283",
+    "konum": "36.7201,37.1167",
+    "konumAdres": "Üniversite yakını, Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Metin Erdoğan tarafından işletilen Üniversite Taksi."
+  },
+  {
+    "id": "emek-taksi",
+    "durakAdi": "Emek Taksi",
+    "telefonlar": [
+      "0542 379 79 19"
+    ],
+    "calismaSaatleri": "06:00 - 23:00",
+    "whatsapp": "905423797919",
+    "konum": "36.7134,37.1234",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit"
+    ],
+    "hizmetler": [],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Emek Taksi durağı."
+  },
+  {
+    "id": "vatan-taksi",
+    "durakAdi": "Vatan Taksi Kilis",
+    "telefonlar": [
+      "0532 643 87 36",
+      "0507 791 00 79"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "905076910079",
+    "konum": "36.7167,37.1198",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan & Minivan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "havalimani",
+      "otogar"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": true,
+    "aciklama": "7/24 hizmet veren Vatan Taksi. Havalimanı ve şehirlerarası transferler."
+  },
+  {
+    "id": "mert-taksi",
+    "durakAdi": "500 Evler Mert Taksi",
+    "telefonlar": [
+      "0545 730 79 79"
+    ],
+    "calismaSaatleri": "06:00 - 22:00",
+    "whatsapp": "905457307979",
+    "konum": "36.7123,37.1210",
+    "konumAdres": "500 Evler Mahallesi, Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit"
+    ],
+    "hizmetler": [],
+    "mahalle": "500 Evler",
+    "oneCikar": false,
+    "aciklama": "500 Evler mahallesinde hizmet veren Mert Taksi."
+  },
+  {
+    "id": "cengel-taksi",
+    "durakAdi": "Çengel Taksi",
+    "telefonlar": [
+      "0537 655 56 49"
+    ],
+    "calismaSaatleri": "06:00 - 23:00",
+    "whatsapp": "905376555649",
+    "konum": "36.7190,37.1278",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "havalimani"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Çengel Taksi durağı."
+  },
+  {
+    "id": "vip-taksi",
+    "durakAdi": "Kilis 7/24 VIP Taksi",
+    "telefonlar": [
+      "0552 752 00 79"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "905527520079",
+    "konum": "36.7212,37.1201",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan & SUV",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "havalimani",
+      "otogar"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": true,
+    "aciklama": "7/24 VIP taksi hizmeti. Konforlu ve güvenli yolculuk."
+  },
+  {
+    "id": "kahraman-taksi",
+    "durakAdi": "Kahraman Taksi",
+    "telefonlar": [
+      "0348 814 14 60"
+    ],
+    "calismaSaatleri": "05:30 - 23:00",
+    "whatsapp": "903488141460",
+    "konum": "36.7098,37.1187",
+    "konumAdres": "Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "havalimani"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Kahraman Taksi durağı."
+  },
+  {
+    "id": "hastane-taksi",
+    "durakAdi": "Kilis Hastane Taksi Durağı",
+    "telefonlar": [
+      "0348 813 11 11"
+    ],
+    "calismaSaatleri": "7/24",
+    "whatsapp": "903488131111",
+    "konum": "36.7155,37.1245",
+    "konumAdres": "Hastane yakını, Merkez, Kilis",
+    "aracTipi": "Sedan & Minivan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [
+      "7/24",
+      "havalimani"
+    ],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Kilis Hastanesi yakınında hizmet veren taksi durağı. 7/24 ulaşım imkanı."
+  },
+  {
+    "id": "hurriyet-taksi",
+    "durakAdi": "Hürriyet Mahallesi Taksi",
+    "telefonlar": [
+      "0544 627 79 00"
+    ],
+    "calismaSaatleri": "06:00 - 23:00",
+    "whatsapp": "905446277900",
+    "konum": "36.7180,37.1200",
+    "konumAdres": "Hürriyet Mahallesi, Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit"
+    ],
+    "hizmetler": [],
+    "mahalle": "Hürriyet",
+    "oneCikar": false,
+    "aciklama": "Hürriyet Mahallesi'nde hizmet veren taksi."
+  },
+  {
+    "id": "fistikli-park-taksi",
+    "durakAdi": "Fıstıklı Park Taksi",
+    "telefonlar": [
+      "0552 450 01 22"
+    ],
+    "calismaSaatleri": "06:00 - 22:00",
+    "whatsapp": "905524500122",
+    "konum": "36.7165,37.1190",
+    "konumAdres": "Fıstıklı Park yakını, Merkez, Kilis",
+    "aracTipi": "Sedan",
+    "odeme": [
+      "nakit",
+      "kart"
+    ],
+    "hizmetler": [],
+    "mahalle": "Merkez",
+    "oneCikar": false,
+    "aciklama": "Fıstıklı Park bölgesinde hizmet veren taksi durağı."
+  }
+]

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kilis merkezdeki tüm taksi duraklarının listesi. Mahalle, hizmet ve ödeme yöntemlerine göre filtreleyin.">
+    <meta name="keywords" content="kilis taksi durakları listesi, kilis taksiler, taksi ara">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
+
+    <title>Tüm Taksi Durakları - Kilis Taksi</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <span class="navbar-logo-icon">🚕</span>
+                <span>Kilis Taksi</span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html" class="active">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+
+            <button class="navbar-toggle" aria-label="Menüyü Aç">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Tüm Taksi Durakları</h1>
+            <p class="hero-subtitle">
+                Kilis merkezdeki tüm taksi duraklarını listeleyin, filtreleyin ve ihtiyacınıza en uygun olanı bulun.
+            </p>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="search-section">
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="search-input" class="search-input"
+                            placeholder="Durak adı, mahalle veya hizmet ara..." autocomplete="off">
+                    </div>
+                    <button id="location-btn" class="search-btn">
+                        📍 En Yakını Bul
+                    </button>
+                </div>
+
+                <div class="filter-panel">
+                    <div class="filter-group">
+                        <label class="filter-label" for="mahalle-filter">Mahalle</label>
+                        <select id="mahalle-filter" class="filter-select">
+                            <option value="">Tüm Mahalleler</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Hizmetler</label>
+                        <div class="filter-checkboxes">
+                            <div class="filter-checkbox-wrapper">
+                                <input type="checkbox" id="is24_7-filter" class="filter-checkbox">
+                                <label for="is24_7-filter" class="filter-checkbox-label">7/24</label>
+                            </div>
+                            <div class="filter-checkbox-wrapper">
+                                <input type="checkbox" id="acceptsCard-filter" class="filter-checkbox">
+                                <label for="acceptsCard-filter" class="filter-checkbox-label">Kartla Ödeme</label>
+                            </div>
+                            <div class="filter-checkbox-wrapper">
+                                <input type="checkbox" id="airport-filter" class="filter-checkbox">
+                                <label for="airport-filter" class="filter-checkbox-label">Havalimanı</label>
+                            </div>
+                            <div class="filter-checkbox-wrapper">
+                                <input type="checkbox" id="busStation-filter" class="filter-checkbox">
+                                <label for="busStation-filter" class="filter-checkbox-label">Otogar</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="active-filters" class="active-filters" style="display: none;"></div>
+
+                <div style="margin-top: 1rem; text-align: center; color: var(--text-secondary); font-size: 0.875rem;">
+                    <span id="result-count"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section -->
+    <section class="section">
+        <div class="container">
+            <div class="ad-container" style="max-width: 728px; margin: 0 auto;">
+                <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Taxis Grid -->
+    <section class="taxis-section">
+        <div class="container">
+            <div id="taxis-container" class="taxis-grid">
+                <!-- Taxi cards will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 class="footer-section-title">Kilis Taksi Portalı</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        Kilis merkezdeki tüm taksi duraklarını tek bir platformda bulun.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="duraklar.html">Tüm Duraklar</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="sss.html">SSS</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-section-title">İletişim</h3>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">
+                        <strong>E-posta:</strong> info@kilistaksi.com<br>
+                        <strong>Telefon:</strong> 0348 XXX XX XX
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kilis Taksi Portalı. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+
+</html>
