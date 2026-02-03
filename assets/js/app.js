@@ -113,7 +113,35 @@ function handleSearch(searchTerm) {
   searchTimeout = setTimeout(() => {
     AppState.activeFilters.search = searchTerm;
     applyFilters();
+    updateDynamicSEO();
   }, 300);
+}
+
+// ============================================
+// Dynamic SEO Updates
+// ============================================
+function updateDynamicSEO() {
+  const metaDescription = document.querySelector('meta[name="description"]');
+  const pageTitle = document.querySelector('title');
+  if (!pageTitle) return;
+
+  const originalTitle = "Kilis Taksi Portalı | 7/24 Taksi Hizmeti";
+  const originalDescription = metaDescription ? metaDescription.getAttribute('content') : "";
+
+  // For Duraklar Page with filters
+  if (window.location.pathname.includes('duraklar.html')) {
+    if (AppState.activeFilters.mahalle) {
+      const mahalle = AppState.activeFilters.mahalle;
+      document.title = `${mahalle} Taksi Durakları - Kilis Taksi`;
+      if (metaDescription) {
+        metaDescription.setAttribute('content', `${mahalle} mahallesindeki taksi durakları, telefon numaraları ve hizmetler. Kilis ${mahalle} en yakın taksi durağını bulun.`);
+      }
+    } else if (AppState.activeFilters.search) {
+      document.title = `"${AppState.activeFilters.search}" için Sonuçlar - Kilis Taksi`;
+    } else {
+      document.title = "Tüm Taksi Durakları - Kilis Taksi";
+    }
+  }
 }
 
 // ============================================
@@ -505,7 +533,12 @@ function loadTaxiDetail() {
 }
 
 function renderTaxiDetail(taxi) {
-  document.title = `${taxi.durakAdi} - Kilis Taksi`;
+  document.title = `${taxi.durakAdi} | Kilis Taksi Telefon & Detaylar`;
+  
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', `${taxi.durakAdi} iletişim bilgileri, telefon numarası ${taxi.telefonlar[0]}, ${taxi.mahalle} mahallesi konumu ve hizmetleri. Kilis taksi durağı detayları.`);
+  }
 
   const container = document.getElementById('taxi-detail-container');
   if (!container) return;
@@ -664,6 +697,7 @@ function initializeEventListeners() {
     mahalleSelect.addEventListener('change', (e) => {
       AppState.activeFilters.mahalle = e.target.value;
       applyFilters();
+      updateDynamicSEO();
     });
   }
 
@@ -719,7 +753,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('durak-detay.html')) {
     loadTaxiDetail();
   } else {
-    loadTaxiData();
+    loadTaxiData().then(() => {
+      // Check for URL parameters on load
+      const urlParams = new URLSearchParams(window.location.search);
+      const mahalleParam = urlParams.get('mahalle');
+      const searchParam = urlParams.get('search');
+      
+      if (mahalleParam) {
+        AppState.activeFilters.mahalle = mahalleParam;
+        const mahalleSelect = document.getElementById('mahalle-filter');
+        if (mahalleSelect) mahalleSelect.value = mahalleParam;
+      }
+      
+      if (searchParam) {
+        AppState.activeFilters.search = searchParam;
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) searchInput.value = searchParam;
+      }
+      
+      if (mahalleParam || searchParam) {
+        applyFilters();
+        updateDynamicSEO();
+      }
+    });
     initializeEventListeners();
   }
 
