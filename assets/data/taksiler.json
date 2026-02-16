@@ -139,45 +139,6 @@
     "aciklama": "Mustafa Pirinççioğlu tarafından işletilen Karadeniz Taksi Durağı."
   },
   {
-    "id": "universite-taksi",
-    "durakAdi": "Üniversite Taksi",
-    "telefonlar": [
-      "0348 813 82 83"
-    ],
-    "calismaSaatleri": "06:00 - 22:00",
-    "whatsapp": "903488138283",
-    "konum": "36.7201,37.1167",
-    "konumAdres": "Üniversite yakını, Merkez, Kilis",
-    "aracTipi": "Sedan",
-    "odeme": [
-      "nakit",
-      "kart"
-    ],
-    "hizmetler": [],
-    "mahalle": "Merkez",
-    "oneCikar": false,
-    "aciklama": "Metin Erdoğan tarafından işletilen Üniversite Taksi."
-  },
-  {
-    "id": "emek-taksi",
-    "durakAdi": "Emek Taksi",
-    "telefonlar": [
-      "0542 379 79 19"
-    ],
-    "calismaSaatleri": "06:00 - 23:00",
-    "whatsapp": "905423797919",
-    "konum": "36.7134,37.1234",
-    "konumAdres": "Merkez, Kilis",
-    "aracTipi": "Sedan",
-    "odeme": [
-      "nakit"
-    ],
-    "hizmetler": [],
-    "mahalle": "Merkez",
-    "oneCikar": false,
-    "aciklama": "Emek Taksi durağı."
-  },
-  {
     "id": "vatan-taksi",
     "durakAdi": "Vatan Taksi Kilis",
     "telefonlar": [
@@ -242,30 +203,6 @@
     "mahalle": "Merkez",
     "oneCikar": false,
     "aciklama": "Çengel Taksi durağı."
-  },
-  {
-    "id": "vip-taksi",
-    "durakAdi": "Kilis 7/24 VIP Taksi",
-    "telefonlar": [
-      "0552 752 00 79"
-    ],
-    "calismaSaatleri": "7/24",
-    "whatsapp": "905527520079",
-    "konum": "36.7212,37.1201",
-    "konumAdres": "Merkez, Kilis",
-    "aracTipi": "Sedan & SUV",
-    "odeme": [
-      "nakit",
-      "kart"
-    ],
-    "hizmetler": [
-      "7/24",
-      "havalimani",
-      "otogar"
-    ],
-    "mahalle": "Merkez",
-    "oneCikar": true,
-    "aciklama": "7/24 VIP taksi hizmeti. Konforlu ve güvenli yolculuk."
   },
   {
     "id": "kahraman-taksi",
